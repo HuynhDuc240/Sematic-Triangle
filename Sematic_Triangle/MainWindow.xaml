@@ -14,7 +14,6 @@
         <Grid.Background>
             <ImageBrush ImageSource="Background/Capture.PNG" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="280,988,0,0" VerticalAlignment="Top" Width="152" Height="59" Grid.Column="1" Background="#FF039351" FontFamily="Papyrus" FontSize="36" FontWeight="Bold" MouseRightButtonDown="Button_MouseRightButtonDown"/>
         <TextBox x:Name="beta" HorizontalAlignment="Left" Height="30" Margin="449,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="beta_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
         <TextBox x:Name="apha" HorizontalAlignment="Left" Height="30" Margin="449,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="apha_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold"/>
         <TextBox x:Name="omega" HorizontalAlignment="Left" Height="30" Margin="449,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="omega_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
@@ -25,8 +24,8 @@
         <TextBox x:Name="s" HorizontalAlignment="Left" Height="30" Margin="449,583,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="s_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
         <TextBox x:Name="height_a" HorizontalAlignment="Left" Height="30" Margin="32,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="height_a_PreviewTextInput" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
         <TextBox x:Name="R" HorizontalAlignment="Left" Height="30" Margin="32,462,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="95" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="R_PreviewTextInput" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
-        <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="355,214,0,0" VerticalAlignment="Top" Width="111" Background="#FF44B918" FontFamily="Viner Hand ITC" FontSize="24" UseLayoutRounding="False" MouseRightButtonDown="Button_MouseRightButtonDown" FontWeight="Bold" MouseLeftButtonUp="Button_MouseLeftButtonUp" MouseLeftButtonDown="Button_MouseLeftButtonDown"/>
-        <Button Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="369,283,0,0" VerticalAlignment="Top" Width="88" Background="#FFB7CF4A" MouseRightButtonDown="Button_MouseRightButtonDown_2" FontFamily="Papyrus" FontSize="20" FontWeight="Bold" MouseLeftButtonDown="Button_MouseLeftButtonDown_1"/>
+        <Button x:Name="submit" Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="355,214,0,0" VerticalAlignment="Top" Width="111" Background="#FF44B918" FontFamily="Viner Hand ITC" FontSize="24" UseLayoutRounding="False" FontWeight="Bold" PreviewMouseLeftButtonDown="submit_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="clear" Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="369,283,0,0" VerticalAlignment="Top" Width="88" Background="#FFB7CF4A" FontFamily="Papyrus" FontSize="20" FontWeight="Bold" PreviewMouseLeftButtonDown="clear_PreviewMouseLeftButtonDown"/>
 
     </Grid>
 </Window>

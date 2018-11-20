@@ -29,45 +29,9 @@ namespace Sematic_Triangle
         {
             InitializeComponent();
         }
-        
+
         #region Control
-        private void Button_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-            load_data();
-
-            // calculation
-            Sulution();
-
-            // show data
-            foreach (dynamic x in recipe.ValueOfElement)
-            {
-                TextBox tb = FindName(x.Key) as TextBox;
-                float temp = x.Value;
-                if(temp == -1)
-                {
-                    tb.Text = "unknown";
-                }
-                else tb.Text = temp.ToString();
-            }
-        }
-        private void Button_MouseRightButtonDown_2(object sender, MouseButtonEventArgs e)
-        {
-            foreach (dynamic x in recipe.NameOfElement)
-            {
-                TextBox tb = FindName(x) as TextBox;
-                tb.Text = "";
-            }
-            data.Clear();
-            recipe.SetVaule(data);
-            network.clear();
-        }
-        private void Button_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void submit_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             load_data();
 
@@ -86,8 +50,7 @@ namespace Sematic_Triangle
                 else tb.Text = temp.ToString();
             }
         }
-
-        private void Button_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        private void clear_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             foreach (dynamic x in recipe.NameOfElement)
             {
@@ -98,6 +61,7 @@ namespace Sematic_Triangle
             recipe.SetVaule(data);
             network.clear();
         }
+        
 
         #endregion
         private void load_data()
@@ -249,6 +213,9 @@ namespace Sematic_Triangle
                 }
             }
         }
+
+
+
 
 
 
