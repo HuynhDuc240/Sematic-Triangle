@@ -51,7 +51,7 @@ namespace Sematic_Triangle
                 else tb.Text = temp.ToString();
             }
         }
-        private void Button_MouseRightButtonDown_1(object sender, MouseButtonEventArgs e)
+        private void Button_MouseRightButtonDown_2(object sender, MouseButtonEventArgs e)
         {
             foreach (dynamic x in recipe.NameOfElement)
             {
@@ -211,6 +211,7 @@ namespace Sematic_Triangle
                 }
             }
         }
+
 
         #endregion
 

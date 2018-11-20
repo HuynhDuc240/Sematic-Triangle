@@ -26,6 +26,7 @@
         <TextBox x:Name="height_a" HorizontalAlignment="Left" Height="31" Margin="116,498,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="height_a_PreviewTextInput"/>
         <TextBox x:Name="R" HorizontalAlignment="Left" Height="31" Margin="218,554,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="R_PreviewTextInput"/>
         <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="191,543,0,0" VerticalAlignment="Top" Width="111" Background="#FF208D00" FontFamily="Papyrus" FontSize="20" UseLayoutRounding="False" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <Button Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="203,600,0,0" VerticalAlignment="Top" Width="88" Background="#FFD8DE51" MouseRightButtonDown="Button_MouseRightButtonDown_2" FontFamily="Papyrus" FontSize="18"/>
 
     </Grid>
 </Window>
