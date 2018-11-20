@@ -5,28 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sematic_Triangle"
         mc:Ignorable="d"
-        Title="Semantic Triangle" Height="700" Width="700">
-    <Grid x:Name="Layer_1" Margin="0,0,0,7" Height="662" VerticalAlignment="Bottom">
+        Title="Semantic Triangle" Height="700" Width="1020">
+    <Grid x:Name="Layer_1" Margin="0,0,0,7" Height="632" VerticalAlignment="Bottom">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="Background/Capture.PNG" Stretch="None"/>
+            <ImageBrush ImageSource="Background/Capture.PNG" Stretch="UniformToFill"/>
         </Grid.Background>
         <Button Content="Submit" HorizontalAlignment="Left" Margin="280,988,0,0" VerticalAlignment="Top" Width="152" Height="59" Grid.Column="1" Background="#FF039351" FontFamily="Papyrus" FontSize="36" FontWeight="Bold" MouseRightButtonDown="Button_MouseRightButtonDown"/>
-        <TextBox x:Name="beta" HorizontalAlignment="Left" Height="31" Margin="50,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="beta_PreviewTextInput"/>
-        <TextBox x:Name="apha" HorizontalAlignment="Left" Height="31" Margin="245,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="apha_PreviewTextInput"/>
-        <TextBox x:Name="omega" HorizontalAlignment="Left" Height="31" Margin="50,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="omega_PreviewTextInput"/>
-        <TextBox x:Name="edge_a" HorizontalAlignment="Left" Height="31" Margin="50,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="edge_a_PreviewTextInput"/>
-        <TextBox x:Name="edge_b" HorizontalAlignment="Left" Height="31" Margin="50,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="edge_b_PreviewTextInput"/>
-        <TextBox x:Name="edge_c" HorizontalAlignment="Left" Height="31" Margin="251,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" TextInput="edge_c_TextInput_1" PreviewTextInput="edge_c_PreviewTextInput"/>
-        <TextBox x:Name="p" HorizontalAlignment="Left" Height="31" Margin="25,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="p_PreviewTextInput"/>
-        <TextBox x:Name="s" HorizontalAlignment="Left" Height="31" Margin="25,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="s_PreviewTextInput"/>
-        <TextBox x:Name="height_a" HorizontalAlignment="Left" Height="31" Margin="116,498,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="height_a_PreviewTextInput"/>
-        <TextBox x:Name="R" HorizontalAlignment="Left" Height="31" Margin="218,554,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="R_PreviewTextInput"/>
-        <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="191,543,0,0" VerticalAlignment="Top" Width="111" Background="#FF208D00" FontFamily="Papyrus" FontSize="20" UseLayoutRounding="False" MouseRightButtonDown="Button_MouseRightButtonDown"/>
-        <Button Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="203,600,0,0" VerticalAlignment="Top" Width="88" Background="#FFD8DE51" MouseRightButtonDown="Button_MouseRightButtonDown_2" FontFamily="Papyrus" FontSize="18"/>
+        <TextBox x:Name="beta" HorizontalAlignment="Left" Height="30" Margin="463,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="beta_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="apha" HorizontalAlignment="Left" Height="30" Margin="463,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="apha_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="omega" HorizontalAlignment="Left" Height="30" Margin="463,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="omega_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="edge_a" HorizontalAlignment="Left" Height="30" Margin="463,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="edge_a_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="edge_b" HorizontalAlignment="Left" Height="30" Margin="463,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="edge_b_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="edge_c" HorizontalAlignment="Left" Height="30" Margin="463,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" TextInput="edge_c_TextInput_1" PreviewTextInput="edge_c_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="p" HorizontalAlignment="Left" Height="30" Margin="45,540,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="p_PreviewTextInput" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="s" HorizontalAlignment="Left" Height="30" Margin="463,574,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="s_PreviewTextInput" Grid.ColumnSpan="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="height_a" HorizontalAlignment="Left" Height="30" Margin="45,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="height_a_PreviewTextInput" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <TextBox x:Name="R" HorizontalAlignment="Left" Height="30" Margin="45,455,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="R_PreviewTextInput" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20"/>
+        <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="355,214,0,0" VerticalAlignment="Top" Width="111" Background="#FF3EE3F3" FontFamily="Viner Hand ITC" FontSize="24" UseLayoutRounding="False" MouseRightButtonDown="Button_MouseRightButtonDown" FontWeight="Bold"/>
+        <Button Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="369,283,0,0" VerticalAlignment="Top" Width="88" Background="#FFD4F7F4" MouseRightButtonDown="Button_MouseRightButtonDown_2" FontFamily="Papyrus" FontSize="20" FontWeight="Bold"/>
 
     </Grid>
 </Window>
