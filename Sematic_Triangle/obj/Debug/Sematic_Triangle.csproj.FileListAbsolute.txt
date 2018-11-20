@@ -35,3 +35,11 @@ D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle_MarkupCom
 D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle_MarkupCompile.lref
 D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.exe
 D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.pdb
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\bin\Debug\Sematic_Triangle.exe.config
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\bin\Debug\Sematic_Triangle.exe
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\bin\Debug\Sematic_Triangle.pdb
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\MainWindow.baml
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.g.resources
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.Properties.Resources.resources
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.csproj.GenerateResource.cache
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.csproj.CoreCompileInputs.cache
