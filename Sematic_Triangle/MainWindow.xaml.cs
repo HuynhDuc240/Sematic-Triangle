@@ -29,7 +29,7 @@ namespace Sematic_Triangle
         {
             InitializeComponent();
         }
-
+        
         #region Control
         private void Button_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -65,7 +65,7 @@ namespace Sematic_Triangle
         #endregion
         private void load_data()
         {
-
+           
             foreach (TextBox tb in FindVisualChildren<TextBox>(window))
             {
                 try
@@ -109,6 +109,7 @@ namespace Sematic_Triangle
                         {
                             
                             int indexOfMissingElement = network.MissingElement(rowOfMissingElement[i]);
+                            if (indexOfMissingElement == -1) continue;
                             Console.WriteLine(rowOfMissingElement[i] + " " + indexOfMissingElement);
                             recipe.CalculationMissingElement(rowOfMissingElement[i], indexOfMissingElement);
                             // update data
@@ -288,11 +289,13 @@ namespace Sematic_Triangle
                         {
                             case "apha": //Missing Element
                                 {
+                                    
                                     //do something
                                     break;
                                 }
                             case "edge_a"://Missing Element
                                 {
+                                    recipe_2_a();
                                     //do something
                                     break;
                                 }
@@ -315,6 +318,7 @@ namespace Sematic_Triangle
                         {
                             case "beta": //Missing Element
                                 {
+                                    
                                     //do something
                                     break;
                                 }
@@ -325,6 +329,7 @@ namespace Sematic_Triangle
                                 }
                             case "edge_b"://Missing Element
                                 {
+                                    recipe_3_b();
                                     //do something
                                     break;
                                 }
@@ -342,6 +347,7 @@ namespace Sematic_Triangle
                         {
                             case "omega": //Missing Element
                                 {
+                                    
                                     //do something
                                     break;
                                 }
@@ -357,6 +363,7 @@ namespace Sematic_Triangle
                                 }
                             case "edge_c"://Missing Element
                                 {
+                                    recipe_4_c();
                                     //do something
                                     break;
                                 }
@@ -704,6 +711,35 @@ namespace Sematic_Triangle
         }
         #endregion
         #region a2 = b2 + c2 - 2.b.c.cos(apha)
+        void recipe_2_a()
+        {
+            double b = ValueOfElement["edge_b"];
+            double c = ValueOfElement["edge_c"];
+            double apha = Math.PI * ValueOfElement["apha"] / 180.0;
+            double result = Math.Sqrt(Math.Pow(b, 2) + Math.Pow(c, 2) - 2 * b * c * Math.Cos(apha));
+            ValueOfElement["edge_a"] = (float)result;
+        }
+        #endregion
+        #region b2 = a2 + c2 - 2.a.c.cos(beta)
+        void recipe_3_b()
+        {
+            double a = ValueOfElement["edge_a"];
+            double c = ValueOfElement["edge_c"];
+            double beta = Math.PI * ValueOfElement["beta"] / 180.0;
+            double result = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(c, 2) - 2 * a * c * Math.Cos(beta));
+            Console.WriteLine(result);
+            ValueOfElement["edge_b"] = (float)result;
+        }
+        #endregion
+        #region c2 = a2 + b2 - 2.a.b.cos(gamma)
+        void recipe_4_c()
+        {
+            double a = ValueOfElement["edge_a"];
+            double b = ValueOfElement["edge_b"];
+            double gamma = Math.PI * ValueOfElement["omega"] / 180.0;
+            double result = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2) - 2 * a * b * Math.Cos(gamma));
+            ValueOfElement["edge_c"] = (float)result;
+        }
         #endregion
         #region a/sin(apha) = b/sin(beta)
         void recipe_5_a()
@@ -769,7 +805,7 @@ namespace Sematic_Triangle
             double edge_b = ValueOfElement["edge_b"];
             double result = Math.Asin(Math.Sin(beta) * edge_c / edge_b) * (180.0 / Math.PI);
             Console.WriteLine(Math.Sin(beta) * edge_c / edge_b);
-            ValueOfElement["apha"] = (float)result;
+            ValueOfElement["omega"] = (float)result;
         }
         void recipe_6_beta()
         {
@@ -795,7 +831,7 @@ namespace Sematic_Triangle
             double omega = Math.PI * ValueOfElement["omega"] / 180.0;
             double edge_b = ValueOfElement["edge_b"];
             double s = ValueOfElement["s"];
-            double result =  edge_b * Math.Sin(omega) / (2 * s);
+            double result =   (2 * s) / (edge_b * Math.Sin(omega)) ;
             ValueOfElement["edge_a"] = (float)result;
         }
         void recipe_7_b()
@@ -803,7 +839,7 @@ namespace Sematic_Triangle
             double omega = Math.PI * ValueOfElement["omega"] / 180.0;
             double edge_a = ValueOfElement["edge_a"];
             double s = ValueOfElement["s"];
-            double result = edge_a * Math.Sin(omega) / (2 * s);
+            double result = (2 * s) / (edge_a * Math.Sin(omega));
             ValueOfElement["edge_b"] = (float)result;
         }
         void recipe_7_omega()
@@ -811,7 +847,7 @@ namespace Sematic_Triangle
             double edge_b = ValueOfElement["edge_b"];
             double edge_a = ValueOfElement["edge_a"];
             double s = ValueOfElement["s"];
-            double result = Math.Asin(edge_a * edge_b / (2 * s)) * (180.0 / Math.PI);
+            double result = Math.Asin((2 * s) / (edge_a * edge_b)) * (180.0 / Math.PI);
             ValueOfElement["omega"] = (float)result;
         }
 
@@ -831,7 +867,7 @@ namespace Sematic_Triangle
             double apha = Math.PI * ValueOfElement["apha"] / 180.0;
             double edge_c = ValueOfElement["edge_c"];
             double s = ValueOfElement["s"];
-            double result = edge_c * Math.Sin(apha) / (2 * s);
+            double result = (2 * s) / (edge_c * Math.Sin(apha));
             ValueOfElement["edge_b"] = (float)result;
         }
         void recipe_8_c()
@@ -839,7 +875,7 @@ namespace Sematic_Triangle
             double apha = Math.PI * ValueOfElement["apha"] / 180.0;
             double edge_b = ValueOfElement["edge_b"];
             double s = ValueOfElement["s"];
-            double result = edge_b * Math.Sin(apha) / (2 * s);
+            double result = (2 * s) / (edge_b * Math.Sin(apha));
             ValueOfElement["edge_c"] = (float)result;
         }
         void recipe_8_apha()
@@ -847,7 +883,7 @@ namespace Sematic_Triangle
             double edge_b = ValueOfElement["edge_b"];
             double edge_c = ValueOfElement["edge_c"];
             double s = ValueOfElement["s"];
-            double result = Math.Asin(edge_c * edge_b / (2 * s)) * (180.0 / Math.PI);
+            double result = Math.Asin((2 * s) / (edge_c * edge_b )) * (180.0 / Math.PI);
             ValueOfElement["apha"] = (float)result;
         }
         #endregion
@@ -985,7 +1021,7 @@ namespace Sematic_Triangle
         {
             double edge_b = ValueOfElement["edge_b"];
             double ha = ValueOfElement["height_a"];
-            double result = Math.Asin((double)ha / edge_b);
+            double result = Math.Asin(ha / edge_b) * (180.0 / Math.PI);
             ValueOfElement["omega"] = (float)result;
         }
         #endregion
