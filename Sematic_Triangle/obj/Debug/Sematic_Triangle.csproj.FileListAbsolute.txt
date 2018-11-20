@@ -28,3 +28,10 @@ D:\GitHub\Sematic_Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.csproj.Ge
 D:\GitHub\Sematic_Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.csproj.CoreCompileInputs.cache
 D:\GitHub\Sematic_Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.exe
 D:\GitHub\Sematic_Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.pdb
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.csprojAssemblyReference.cache
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\MainWindow.g.cs
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\App.g.cs
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle_MarkupCompile.cache
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle_MarkupCompile.lref
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.exe
+D:\GitHub\Sematic-Triangle\Sematic_Triangle\obj\Debug\Sematic_Triangle.pdb

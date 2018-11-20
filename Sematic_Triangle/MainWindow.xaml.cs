@@ -970,14 +970,14 @@ namespace Sematic_Triangle
         void recipe_12_ha()
         {
             double edge_b = ValueOfElement["edge_b"];
-            double gamma = ValueOfElement["omega"];
+            double gamma = Math.PI*ValueOfElement["omega"]/180.0;
             double result = edge_b * Math.Sin(gamma);
             ValueOfElement["height_a"] = (float)result;
         }
         void recipe_12_b()
         {
             double ha = ValueOfElement["height_a"];
-            double gamma = ValueOfElement["omega"];
+            double gamma = Math.PI*ValueOfElement["omega"]/180.0);
             double result = (double)ha / Math.Sin(gamma);
             ValueOfElement["edge_b"] = (float)result;
         }
