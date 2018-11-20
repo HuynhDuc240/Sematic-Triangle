@@ -1,0 +1,31 @@
+﻿<Window x:Name="window" x:Class="Sematic_Triangle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sematic_Triangle"
+        mc:Ignorable="d"
+        Title="Semantic Triangle" Height="700" Width="700">
+    <Grid x:Name="Layer_1" Margin="0,0,0,7" Height="662" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Background/Capture.PNG" Stretch="None"/>
+        </Grid.Background>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="280,988,0,0" VerticalAlignment="Top" Width="152" Height="59" Grid.Column="1" Background="#FF039351" FontFamily="Papyrus" FontSize="36" FontWeight="Bold" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+        <TextBox x:Name="beta" HorizontalAlignment="Left" Height="31" Margin="50,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="beta_PreviewTextInput"/>
+        <TextBox x:Name="apha" HorizontalAlignment="Left" Height="31" Margin="245,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="apha_PreviewTextInput"/>
+        <TextBox x:Name="omega" HorizontalAlignment="Left" Height="31" Margin="50,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="omega_PreviewTextInput"/>
+        <TextBox x:Name="edge_a" HorizontalAlignment="Left" Height="31" Margin="50,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="edge_a_PreviewTextInput"/>
+        <TextBox x:Name="edge_b" HorizontalAlignment="Left" Height="31" Margin="50,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="edge_b_PreviewTextInput"/>
+        <TextBox x:Name="edge_c" HorizontalAlignment="Left" Height="31" Margin="251,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" TextInput="edge_c_TextInput_1" PreviewTextInput="edge_c_PreviewTextInput"/>
+        <TextBox x:Name="p" HorizontalAlignment="Left" Height="31" Margin="25,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="p_PreviewTextInput"/>
+        <TextBox x:Name="s" HorizontalAlignment="Left" Height="31" Margin="25,419,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="s_PreviewTextInput"/>
+        <TextBox x:Name="height_a" HorizontalAlignment="Left" Height="31" Margin="116,498,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="height_a_PreviewTextInput"/>
+        <TextBox x:Name="R" HorizontalAlignment="Left" Height="31" Margin="218,554,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Background="#FFECE671" TextAlignment="Center" PreviewTextInput="R_PreviewTextInput"/>
+        <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="191,543,0,0" VerticalAlignment="Top" Width="111" Background="#FF208D00" FontFamily="Papyrus" FontSize="20" UseLayoutRounding="False" MouseRightButtonDown="Button_MouseRightButtonDown"/>
+
+    </Grid>
+</Window>
