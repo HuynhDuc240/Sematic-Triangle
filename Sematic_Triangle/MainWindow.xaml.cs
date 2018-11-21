@@ -66,11 +66,11 @@ namespace Sematic_Triangle
         #endregion
         private void load_data()
         {
-           
-            foreach (TextBox tb in FindVisualChildren<TextBox>(window))
+            try
             {
-                try
+                foreach (TextBox tb in FindVisualChildren<TextBox>(window))
                 {
+                
                     if (tb.Text == "" || tb.Text =="unknown")
                     {
                         data.Add(tb.Name, -1);
@@ -78,10 +78,11 @@ namespace Sematic_Triangle
                     }
                     else data.Add(tb.Name, float.Parse(tb.Text));
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: \n " + ex.Message.ToString(), "Big Bug", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: \n " + ex.Message.ToString(), "Big Bug", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             recipe.SetVaule(data);
             network.set_network(data);
@@ -262,6 +263,7 @@ namespace Sematic_Triangle
         #endregion
         public void CalculationMissingElement(int row, int index)// row is ricipe, index is missing element
         {
+            
             switch(row)
             {
                 case 0: // recipe 1
@@ -654,21 +656,14 @@ namespace Sematic_Triangle
             float beta = ValueOfElement["beta"];
             float omega = ValueOfElement["omega"];
             float result;
-            try
+            if (180 - beta - omega > 0)
             {
-                if(180 - beta - omega > 0)
-                {
-                    result = 180 - beta - omega;
-                    ValueOfElement["apha"] = result;
-                }
-                else
-                {
-                    ValueOfElement["apha"] = float.Parse("error");
-                }
+                result = 180 - beta - omega;
+                ValueOfElement["apha"] = result;
             }
-            catch 
+            else
             {
-                MessageBox.Show("Tong 3 goc lon hon 180 ", "Big Bug", MessageBoxButton.OK, MessageBoxImage.Error);
+                ValueOfElement["apha"] = float.Parse("error");
             }
         }
         private void recipe_1_beta()
@@ -676,21 +671,14 @@ namespace Sematic_Triangle
             float apha = ValueOfElement["apha"];
             float omega = ValueOfElement["omega"];
             float result;
-            try
+            if (180 - apha - omega > 0)
             {
-                if (180 - apha - omega > 0)
-                {
-                    result = 180 - apha - omega;
-                    ValueOfElement["beta"] = result;
-                }
-                else
-                {
-                    ValueOfElement["beta"] = float.Parse("error");
-                }
+                result = 180 - apha - omega;
+                ValueOfElement["beta"] = result;
             }
-            catch
+            else
             {
-                MessageBox.Show("Tong 3 goc lon hon 180 ", "Big Bug", MessageBoxButton.OK, MessageBoxImage.Error);
+                ValueOfElement["beta"] = float.Parse("error");
             }
         }
         private void recipe_1_omega()
@@ -698,22 +686,16 @@ namespace Sematic_Triangle
             float apha = ValueOfElement["apha"];
             float beta = ValueOfElement["beta"];
             float result;
-            try
+            if (180 - beta - apha > 0)
             {
-                if (180 - beta - apha > 0)
-                {
-                    result = 180 - beta - apha;
-                    ValueOfElement["omega"] = result;
-                }
-                else
-                {
-                    ValueOfElement["omega"] = float.Parse("error");
-                }
+                result = 180 - beta - apha;
+                ValueOfElement["omega"] = result;
             }
-            catch
+            else
             {
-                MessageBox.Show("Tong 3 goc lon hon 180 ", "Big Bug", MessageBoxButton.OK, MessageBoxImage.Error);
+                ValueOfElement["omega"] = float.Parse("error");
             }
+            
         }
         #endregion
         #region a2 = b2 + c2 - 2.b.c.cos(apha)
