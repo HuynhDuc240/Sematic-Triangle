@@ -297,7 +297,7 @@ namespace Sematic_Triangle
                         {
                             case "apha": //Missing Element
                                 {
-                                    
+                                    recipe_2_apha();
                                     //do something
                                     break;
                                 }
@@ -326,7 +326,7 @@ namespace Sematic_Triangle
                         {
                             case "beta": //Missing Element
                                 {
-                                    
+                                    recipe_3_beta();
                                     //do something
                                     break;
                                 }
@@ -355,7 +355,7 @@ namespace Sematic_Triangle
                         {
                             case "omega": //Missing Element
                                 {
-                                    
+                                    recipe_4_omega();
                                     //do something
                                     break;
                                 }
@@ -707,6 +707,15 @@ namespace Sematic_Triangle
             double result = Math.Sqrt(Math.Pow(b, 2) + Math.Pow(c, 2) - 2 * b * c * Math.Cos(apha));
             ValueOfElement["edge_a"] = (float)result;
         }
+        void recipe_2_apha()
+        {
+            double a = ValueOfElement["edge_a"];
+            double b = ValueOfElement["edge_b"];
+            double c = ValueOfElement["edge_c"];
+            double apha = (-Math.Pow(a, 2) + Math.Pow(b, 2) + Math.Pow(c, 2)) / (2 * b * c);
+            apha = Math.Acos(apha) * (180.0 / Math.PI);
+            ValueOfElement["apha"] = (float)apha;
+        }
         #endregion
         #region b2 = a2 + c2 - 2.a.c.cos(beta)
         void recipe_3_b()
@@ -718,6 +727,15 @@ namespace Sematic_Triangle
             Console.WriteLine(result);
             ValueOfElement["edge_b"] = (float)result;
         }
+        void recipe_3_beta()
+        {
+            double a = ValueOfElement["edge_a"];
+            double b = ValueOfElement["edge_b"];
+            double c = ValueOfElement["edge_c"];
+            double beta = (Math.Pow(a, 2) - Math.Pow(b, 2) + Math.Pow(c, 2)) / (2 * a * c);
+            beta = Math.Acos(beta) * (180.0 / Math.PI);
+            ValueOfElement["beta"] = (float)beta;
+        }
         #endregion
         #region c2 = a2 + b2 - 2.a.b.cos(gamma)
         void recipe_4_c()
@@ -727,6 +745,15 @@ namespace Sematic_Triangle
             double gamma = Math.PI * ValueOfElement["omega"] / 180.0;
             double result = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2) - 2 * a * b * Math.Cos(gamma));
             ValueOfElement["edge_c"] = (float)result;
+        }
+        void recipe_4_omega()
+        {
+            double a = ValueOfElement["edge_a"];
+            double b = ValueOfElement["edge_b"];
+            double c = ValueOfElement["edge_c"];
+            double omega = (Math.Pow(a, 2) + Math.Pow(b, 2) - Math.Pow(c, 2)) / (2 * a * b);
+            omega = Math.Acos(omega) * (180.0 / Math.PI);
+            ValueOfElement["omega"] = (float)omega;
         }
         #endregion
         #region a/sin(apha) = b/sin(beta)
